@@ -12,7 +12,7 @@ const app = express();
 const dbURI = 'mongodb+srv://mongodbuser:Amazon2021@amazon-price-drop-exten.xqrpz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then((result) => {
-        console.log('Database is connected');
+        console.log('Database is connected successfully!!!');
     })
     .catch((error) => {
         console.log(error);
