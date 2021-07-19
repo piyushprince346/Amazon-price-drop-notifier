@@ -1,0 +1,22 @@
+<div ng-controller="LoginFormController">
+    <h4>Login form</h4>
+    <div id="login-form">
+        <form ng-submit="saveUser(this)">
+            <div>
+                <label for="email">Email: </label><br>
+                <input ng-model="email" id="email" type="email">
+            </div>
+            <div>
+                <br>
+                <label for="password">Password: </label><br>
+                <input ng-model="password" id="password" type="password">
+            </div>
+            <div>
+                <br>
+                <button type="submit"> Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>

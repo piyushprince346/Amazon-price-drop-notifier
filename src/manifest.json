@@ -1,0 +1,30 @@
+{
+    "name": "amazon-scrapper",
+    "version": "1.0",
+    "description": "Scrapes Amazon search result and notifies about price changes",
+    "permissions": [
+        "notifications"
+    ],
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.amazon.in/gp/registry/wishlist?requiresSignIn=1&ref_=nav_AccountFlyout_wl"
+            ],
+            "js": [
+                "js/content.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "html/popup.html",
+        "default_title": "Amazon Scrapper"
+    },
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ],
+        "persistent": false
+    },
+    "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}
